@@ -1,0 +1,27 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  name: MyString
+  code: MyString
+  provider_id: 
+  marck: MyString
+  modelo: MyString
+  amount: 1
+  purchase_value: 9.99
+  sale_value: 9.99
+  description: MyText
+  active: false
+  data: 2015-01-26
+
+two:
+  name: MyString
+  code: MyString
+  provider_id: 
+  marck: MyString
+  modelo: MyString
+  amount: 1
+  purchase_value: 9.99
+  sale_value: 9.99
+  description: MyText
+  active: false
+  data: 2015-01-26

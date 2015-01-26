@@ -1,0 +1,17 @@
+<h1>Relatorio</h1>
+<table class="table table-bordered">
+  <thead>
+    <tr>
+      <th>Produtos</th>
+      <th>Quantidade Disponivel</th>
+    </tr>
+  </thead>  
+  <tbody>
+    <% @products.each do |product| %>
+      <tr>
+        <th><%= product.name %></th>
+        <th><%= product.inventory %></th>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
