@@ -1,0 +1,18 @@
+<h1>Relatorio de Vendas</h1>
+<table class="table table-bordered">
+  <thead>
+    <tr>
+      <th>Vendas Com desconto</th>
+      <th>Produtos</th>
+    </tr>
+  </thead>  
+  <tbody>
+    <% @products.each do |product| %>
+      <tr>
+        <th><%= product.name %></th>
+        <th><%= product.discount %></th>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+

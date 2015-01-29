@@ -1,11 +1,10 @@
 class SalesController < ApplicationController
   before_action :set_sale, only: [:show, :edit, :update, :destroy]
-
+ 
   respond_to :html
 
   def index
     @sales = Sale.all
-    @product = Product.all
     respond_with(@sales)
   end
 
@@ -28,7 +27,14 @@ class SalesController < ApplicationController
   def create
     @sale = Sale.new(sale_params)
     @sale.user_id = current_user.id
-    respond_with(@sale)
+    if @sale.save
+      respond_with(@sale)
+    else
+     redirect_to root_path, :notice => "Quantidade em estoque indisponivel"
+    end
+      
+   
+
   end
            
   def update
@@ -48,5 +54,6 @@ class SalesController < ApplicationController
 
     def sale_params
       params.require(:sale).permit(:product_id, :code_id, :amount, :discount, :user_id)
-    end
+    end   
+
 end

@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  get 'sales_report/index'
+
   get 'report/index'
 
   resources :products
